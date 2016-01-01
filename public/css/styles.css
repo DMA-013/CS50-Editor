@@ -1,0 +1,361 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: auto;
+}
+
+#top .nav
+{
+    /* center navigation pills */
+    display: inline-block;
+    
+}
+
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}
+
+/*This is the push and slide menu style apdated from html tuts*/
+/*This was part of the tutorial from html tuts with jQuery*/
+/*http://html-tuts.com/jquery-side-menu/*/
+
+
+html,body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+	overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+	
+}
+
+.headerContainer,
+.footerContainer {
+    overflow:auto;
+	max-width: 960px;
+	margin: 0 auto;
+	height: auto;
+	background: #FFF;
+}
+
+.bodyContainer {
+    overflow:auto;
+	max-width: 960px;
+	margin: 0 auto;
+	height: 610px;
+	background: #FFF;
+	-webkit-box-shadow: 0 0 5px 3px rgba(0,0,0, 0.3);
+	box-shadow: 0 0 8px 3px rgba(0,0,0, 0.3);
+}
+
+/*The body where to hold the content that moves*/
+.siteWrapper {
+	background: #fff;
+	position: relative;
+	left: 0;
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.sideOpen .siteWrapper {
+	left: -300px;
+}
+
+/*This is the location of the menu side trigger*/
+.sideTrigger {
+	float: right;
+	padding: 10px;
+}
+
+.closeTrigger {
+	text-decoration: none;
+	color: #000;
+	font-size: 30px;
+	display: inline-block;
+}
+
+
+/*The menu styling */
+.sideMenu {
+	position: fixed;
+	z-index: 9999;
+	right: -300px;
+	height: 100%;
+	width: 300px;
+	background:#2C3E50;
+	
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.sideOpen .sideMenu {
+	right: 0;
+}
+
+.sideMenu:after {
+	content: "";
+	top: -10%;
+	left: 0;
+	height: 120%;
+	width: 150%;
+	z-index: -1;
+	position: absolute;
+
+}
+
+/*This is the padding to surround container*/
+.padding {
+	padding: 20px;
+}
+
+
+
+/* The editor through using contenteditable and example */
+/* of Editing Page Elements with contenteditable by Matt West */
+/* http://codepen.io/matt-west/full/gtruC */
+/*This hides the contenteditable area border*/
+*:focus {
+	outline: none;
+}
+
+
+/*Fade in and out scroll bar on div hover by keegan lambert*/
+/*http://codepen.io/kqlambert/pen/tbJCD/*/
+/*Change the width for the editor width*/
+.scroll-bar-wrap {
+  width: 925px;
+  
+  position: relative;
+  margin: 2em auto;
+}
+
+/*Change height for adjustment if needed*/
+/*This is from*/
+.scroll-box {
+  
+  width: 100%;
+  height: 530px;
+  overflow-y: scroll;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: .4em; 
+}
+.scroll-box::-webkit-scrollbar,
+.scroll-box::-webkit-scrollbar-thumb {
+  overflow:visible;
+  border-radius: 4px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2); 
+}
+
+.cover-bar {
+  position: absolute;
+  background: #fff;;
+  height: 100%;  
+  top: 0;
+  right: 0;
+  width: .4em;
+  -webkit-transition: all .5s;
+  opacity: 1;
+}
+/* MAGIC HAPPENS HERE */
+.scroll-bar-wrap:hover .cover-bar {
+   opacity: 0;
+  -webkit-transition: all .5s;
+}
+
+
+
+/*Padding around notepad editor*/
+.paddingeditor {
+
+	margin: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14pt;
+	
+}
+
+
+
+/*Hides scrollbar in ace editor*/
+.ace_scrollbar {
+    display: none !important;
+}
+
+/*This is the list of code modes*/
+/*This is based on jakob-e's Ace - embeddable code editor on code-pen*/
+/*http://codepen.io/jakob-e/pen/EJuiK*/
+
+
+
+/*To style the editor for ace editor*/
+#editor { 
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  
+  position:relative;
+  height:654px; 
+}
+
+
+
+
+/*This is the margin around ace editor*/
+.wrapper{
+    margin: 20px;
+    background: #4B77BE;
+}
+
+
+
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+
+    /*This is to change the border*/
+    border-bottom: 2px solid #19B5FE;
+    
+    
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #999999;
+
+    
+    transition: 0.2s ease;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+/*This is a padding for the logo on the navbar*/
+.logo{
+    font-size: 33px;
+    line-height: 1;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+ 
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+  background: rgba(0,0,0,0.5);
+  -webkit-border-radius: 100px;
+  background-clip: padding-box;
+  border: 2px solid rgba(0, 0, 0, 0);
+  min-height: 10px; /*Prevent it from getting too small */
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+
+
+
+
+
+
+
